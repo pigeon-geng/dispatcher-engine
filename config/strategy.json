@@ -1,0 +1,60 @@
+{
+
+  "test1": {
+    "strategy": "Linear",
+    "config": {},
+    "processors": [
+      {
+        "name": "TestProcessor_11",
+        "config": {"a1": ""}
+      },
+      {
+        "name": "TestProcessor_12",
+        "config": {"a2": ""}
+      },
+      {
+        "name": "TestProcessor_13",
+        "config": {"a3": ""}
+      }
+    ]
+  },
+
+  "test2": {
+    "strategy": "Linear",
+    "config": {},
+    "processors": [
+      {
+        "name": "TestProcessor_21",
+        "config": {"b": ""}
+      },
+      {
+        "name": "TestProcessor_22",
+        "config": {"b": ""}
+      },
+      {
+        "name": "TestProcessor_23",
+        "config": {"b": ""}
+      }
+    ]
+  },
+
+  "test": {
+    "strategy": "Parallel",
+    "config": {},
+    "ref":["test1", "test2"],
+    "processors": [
+      {
+        "name": "TestProcessor1",
+        "config": {"c": ""}
+      },
+      {
+        "name": "TestProcessor2",
+        "config": {"c": ""}
+      },
+      {
+        "name": "TestProcessor3",
+        "config": {"c": ""}
+      }
+    ]
+  }
+}
